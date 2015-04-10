@@ -311,8 +311,8 @@ class Html
 			if(count($clear))
 				$buf = self::ClearPairs($buf, $clear);
 
-			$buf = preg_replace("/(<(?:br|p|div|table|td|th|tr|li|ol|ul|h1|h2|h3|h4|h5|h6).*?>)/i", "\n$1", $buf);
-			$buf = preg_replace("/(<\/(?:br|p|div|table|td|th|tr|li|ol|ul|h1|h2|h3|h4|h5|h6)[^>]*>)/i", "$1\n", $buf);
+			$buf = preg_replace("/(<(?:p|div|table|td|th|tr|li|ol|ul|h1|h2|h3|h4|h5|h6).*?>)/i", "\n$1", $buf);
+			$buf = preg_replace("/(<\/(?:p|div|table|td|th|tr|li|ol|ul|h1|h2|h3|h4|h5|h6)[^>]*>)/i", "$1\n", $buf);
 			$arr = explode("\n", $buf);
 			foreach($arr as $k=>$v)
 			{
