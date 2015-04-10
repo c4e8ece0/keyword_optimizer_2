@@ -304,7 +304,6 @@ class Html
 		}
 
 		if( $buf = self::Body($buf) )
-#		if($buf)
 		{
 #			$buf = self::ClearPairs($buf, array('textarea', 'select', 'title'));
 			$buf = self::ClearPairs($buf, array('textarea', 'select'));
