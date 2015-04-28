@@ -1,4 +1,4 @@
-<?
+<?php
 
 $MORPHY_OBJECT = '';
 

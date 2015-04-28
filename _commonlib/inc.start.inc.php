@@ -1,4 +1,4 @@
-<?
+<?php
 
 setlocale(LC_CTYPE, array('ru_RU.CP1251', 'Russian_Russia.1251'));
 

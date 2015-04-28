@@ -1,4 +1,6 @@
-<?
+<?php
+
+error_reporting(0);
 
 define('INCLUDE_COMMON', dirname(__FILE__) . '/_commonlib');
 
@@ -534,7 +536,7 @@ table.list th {font-size:9px; font-family:arial; width:10%; font-weight:normal; 
 		<input type="hidden" name="form" value="url">
 		<b>Новый URL:</b>
 		<br>
-		<input type="text" style="height:18px;" name="url" value="<?=htmlspecialchars($__content['url']);?>">
+		<input type="text" style="height:18px;" name="url" value="<?php print htmlspecialchars($__content['url']);?>">
 		<br>
 		<input type="submit" value="Задать" class="button">
 		<br><br><br><br>
@@ -548,7 +550,7 @@ table.list th {font-size:9px; font-family:arial; width:10%; font-weight:normal; 
 		<input type="hidden" name="form" value="keyword">
 		<b>Запросы:</b>
 		<br>
-		<textarea name="keyword" style="height:60px;"><?=htmlspecialchars($__content['keyword']);?></textarea>
+		<textarea name="keyword" style="height:60px;"><?php print htmlspecialchars($__content['keyword']);?></textarea>
 		<br>
 		<input type="submit" value="Задать список" class="button">
 		</form>
@@ -561,7 +563,7 @@ table.list th {font-size:9px; font-family:arial; width:10%; font-weight:normal; 
 		<input type="hidden" name="form" value="synonim">
 		<b>Cписок замены (собак#кошка):</b>
 		<br>
-		<textarea name="synonim" style="height:60px;"><?=htmlspecialchars($__content['synonim']);?></textarea>
+		<textarea name="synonim" style="height:60px;"><?php print htmlspecialchars($__content['synonim']);?></textarea>
 		<br>
 		<input type="submit" value="Обновить синонимы" class="button">
 		</form>
@@ -577,23 +579,23 @@ table.list th {font-size:9px; font-family:arial; width:10%; font-weight:normal; 
 <tr>
 	<td style="width:20%;">
 		<div class="line">Слова на странице</div>
-		<?=$__stat_page_word;?>
+		<?php print $__stat_page_word;?>
 
 		<div class="line">Страница</div>
-		<?=$__stat_page_passage;?>
-		<?=$__stat_optimization;?>
+		<?php print $__stat_page_passage;?>
+		<?php print $__stat_optimization;?>
 
 	</td>
 	<td style="width:20%;">
 		<div class="line">Слова в запросах</div>
-		<?=$__stat_query_word;?>
+		<?php print $__stat_query_word;?>
 	</td>
 	<td style="width:60%;">
 		<div class="line">Запросы в работе</div>
-		<?=$__stat_query_kw;?>
+		<?php print $__stat_query_kw;?>
 
 		<div class="line">Готовые запросы</div>
-		<?=$__stat_query_kwr;?>
+		<?php print $__stat_query_kwr;?>
 
 	</td>
 </tr>
@@ -603,7 +605,7 @@ table.list th {font-size:9px; font-family:arial; width:10%; font-weight:normal; 
 
 
 </body></html>
-<?
+<?php
 /*
 ###############################################################################
 Отлодочная информация
